@@ -1,60 +1,34 @@
-# erdos411-retraction-record
+# Erdős–Graham #411 — historical retraction record
 
-**A math program that claimed a closure, then killed its own claim, with both halves published.**
+This repository preserves the June 9, 2026 retraction of an earlier #411 `r=2` closure argument.
 
-Author: Jared Wilder. First public timestamp: 2026-09-10.
+The invalid route was based on `cambie_depth3_check`. That check can be true on every prime in the relevant residue class without excluding the objects required by the actual problem. Formal verification of the check therefore did not establish the intended mathematical conclusion.
 
-## Start here
+## What was retracted
 
-`retraction/RETRACTION-EG411-R2-2026-06-09.md`
+The retraction withdrew the closure claims built on that route, including documents and receipts labelled with terms such as
 
-That document is authoritative and it is the reason this repository exists. Its first line:
+```text
+CLOSED_MOD_AXIOMS
+unconditionally closed
+full victory
+complete closure
+```
 
-> **RETRACTION - "EG#411 r=2 closed" is FALSE. The problem is OPEN.**
+The underlying issue was semantic rather than kernel-level: the formal proposition being checked was not strong enough to imply the target theorem.
 
-It withdraws, by name, every prior claim in the program that Erdos-Graham #411 (r=2) was
-"closed", "closed modulo an axiom", `CLOSED_MOD_AXIOMS`, or "unconditionally closed", including
-a final-accounting document, a canonical-state document, a file literally called
-`WIN-EG411-UNCONDITIONAL`, the receipts that claimed closure, a public research page, a
-manifest card, and a memory note.
+The contemporaneous retraction is preserved at
 
-## Why the closure was false, in the retraction's own words
+[`retraction/RETRACTION-EG411-R2-2026-06-09.md`](retraction/RETRACTION-EG411-R2-2026-06-09.md).
 
-> The repo's `cambie_depth3_check`-based "closure" does not address the actual problem. Proving
-> `cambie_depth3_check p = true` for all primes `p = 7 (mod 8)` - even with zero axioms - would
-> resolve **nothing**, because the check is provably `true` at *every* prime the problem asks us
-> to rule out.
+## Archive
 
-And on whether this was excessive caution:
+`archive/` contains the original research packets under their historical filenames. They are retained so the source history is inspectable rather than silently rewritten after the correction.
 
-> This is not a hedge or a re-opening out of caution. It is a checkable, structural fact,
-> confirmed against the primary literature and by direct computation.
+The useful mathematical work that survived the retraction—bridge, cascade, and omega-ladder material—belongs in the main [`erdos411`](https://github.com/jaredwilder/erdos411) repository.
 
-A formally verified proof of a statement that is vacuously true at every relevant input. The
-kernel was satisfied. The mathematics was not. That failure mode is the whole point of this
-repository.
+## Purpose
 
-## What is in `archive/`
+This repository documents one specific failed proof route and its correction. It is not the current reading surface for Erdős–Graham #411.
 
-75 files: the research packets produced along the way, several of them named for victories that
-did not happen. `ERDOS_411_R597_ABSOLUTE_KILLSHOT_PACKET.zip`,
-`ERDOS_411_R599_FULL_VICTORY_PROOF_FRONTIER.zip`,
-`ERDOS_411_R603_COMPLETE_CLOSURE_FORBIDDEN_SIGNATURE_BOARD.zip`.
-
-**They are published deliberately, under their original names, with the retraction that kills
-them.** Deleting them would make the record look cleaner than it was. The real result of the
-411 program is the bridge, cascade and omega-ladder work, which lives at
-github.com/jaredwilder/erdos411 and is unaffected by this retraction.
-
-## Why publish this at all
-
-Every other repository released tonight asks a stranger to trust numbers that came out of a
-mostly automated pipeline. The only evidence worth anything for that trust is what happened the
-time the pipeline was wrong and nobody outside would have caught it. This is that record, in
-full, including the enthusiastic filenames.
-
-Erdos-Graham #411 (r=2) is OPEN.
-
-## License
-
-Apache-2.0.
+Author: Jared Wilder. License: Apache-2.0.
